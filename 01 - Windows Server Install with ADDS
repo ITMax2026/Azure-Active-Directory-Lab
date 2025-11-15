@@ -1,4 +1,4 @@
-Steps for setting up a VM in azure and installing Windows Server 2022
+Steps for setting up a VM in azure and installing Windows Server 2022 with Active Directory Domain Services 
 
 1. Create a VNET
  - VNET Name: vnet-adlab
