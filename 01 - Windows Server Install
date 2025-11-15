@@ -18,7 +18,7 @@ Steps for setting up a VM in azure and installing Windows Server 2022
 
   - After creation, set the VM private IP to static:  10.0.1.4 (Static)
 
-3. Create Bastion
+3. Create Bastion (From Bastion page: Azure Bastion protects your virtual machines by secure and seamless RDP & SSH connectivity without the need to expose them through public IP addresses)
   - In your VNET create a basion. Mine: vnet-adlab-bastion
   - Can connect using the Connect menu inside the VM and filling in your username and VM password 
 
