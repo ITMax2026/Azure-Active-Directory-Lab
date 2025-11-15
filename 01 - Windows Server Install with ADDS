@@ -22,7 +22,7 @@ Steps for setting up a VM in azure and installing Windows Server 2022 with Activ
   - In your VNET create a basion. Mine: vnet-adlab-bastion
   - Can connect using the Connect menu inside the VM and filling in your username and VM password 
 
-  - I put on an auto shutoff at 8:30 pm on my VM.  There is a very small fee to run the Bastion (so you can delete everytime if you want).  Otherwise just use the VM Connect with Bastion to reconnect
+  - I put on an auto shutoff at 8:30 pm on my VM.  There is a very small fee to run the Bastion (so you can delete everytime if you want).  Otherwise just use VM Connect with Bastion to reconnect once VM is restarted.
 
 
                                        
