@@ -1,0 +1,25 @@
+Steps for setting up a VM in azure and installing Windows Server 2022
+
+1. Create a VNET
+ - VNET Name: vnet-adlab
+ - Create a resource group - rg-adlab-eastus2
+ - Create a VNET with address space 10.0.0.0/16
+ - Create two subnets:
+    Workload at 10.0.1.0/24
+    AzureBastionSubnet at 10.0.2.0/26 (for an Azure Bastion the subnet CIDR must be 26 or larger)
+
+2. Create the VM - this one will be used as the Domain Controller
+  - Computer Name: DC-01
+  - Image: Windos Server - 2022-datacenter-azure-edition
+  - Size: Standard B2ms (2 vcpus, 8 GiB memory) - ##I chose these specs to be performant for a lab while being cost effective
+  - Networking: vnet-adlab/Workload, No public IP
+  - Disk: ## Again chose this setting for adequent performance while being cost effective
+      - Size: 127 GiB
+      - Storage type: Standard SSD LRS
+
+  - After creation, set the VM private IP to static:  10.0.1.4 (Static)
+
+3. Create Bastion - 
+  - Can be done using the Connect menu inside the VM and filling in your username and VM password
+
+                                       
