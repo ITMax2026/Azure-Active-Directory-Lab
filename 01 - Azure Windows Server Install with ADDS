@@ -24,5 +24,12 @@ Steps for setting up a VM in azure and installing Windows Server 2022 with Activ
 
   - I put on an auto shutoff at 8:30 pm on my VM.  There is a very small fee to run the Bastion (so you can delete everytime if you want).  Otherwise just use VM Connect with Bastion to reconnect once VM is restarted.
 
+4. Install Active Directory Domain Service
+ - In Server Manager click Add Roles and Features and install ADDS
+ - Click Server Manager, which will have a Yellow flag, and click promote this server to a domain controller
+ - Click add a new forest and set your Root domain name: ad.lab
+ - Set DSRM password 
 
-                                       
+5. Point the VNET DNS to the Domain Controller.  
+ - Write into the VNET DNS Servers the Domain Controller's private (static) IP.  Which in my case is 10.0.1.4 (Static)
+ * This step is somewhat unique to Azure.  You would use DHCP for a local deployment.  But the need for the client to use a Domain Controller for DNS is the same
