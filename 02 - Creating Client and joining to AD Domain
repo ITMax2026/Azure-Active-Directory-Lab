@@ -12,3 +12,9 @@ I am using a Windows Server image for the client because on Azure you need an En
       - Size: 127 GiB
       - Storage type: Standard SSD LRS
 
+2. Join the domain
+   - System > About > Workplace or Domain Controller > Click change:
+     - Computer Name: Client-01
+     - Membor of (select) Domain: ad.lab
+   - Have to use Domain controller username and password
+   - Can check the client joined Active Director in Active Directory Users and Computers on the Domain Controller - It is not domain joined
