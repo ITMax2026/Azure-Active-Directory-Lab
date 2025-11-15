@@ -1,1 +1,14 @@
+I am using a Windows Server image for the client because on Azure you need an Enterprise license to use the Windows 11 VM image.
+
+1. Create a VM - this will be a client
+  - Computer Name: Client-01
+  - Image: Windows Server 2025 Datacenter: Azure Edition - Gen2 (When I ran this part of the lab when Windows Servers 2025 was the recommended Gen 2 image)
+  - Size: Standard B2ms (2 vcpus, 8 GiB memory) - ##I chose these specs to be performant for a lab while being cost effective
+  - Networking: (this part is important so that the new Client connects on the same network as the Domain controller and inherits the same DNS settings) 
+      -Virtual network: vnet-adlab
+      -Subnet: Workload 
+      -No public IP
+  - Disk: ## Again chose this setting for adequent performance while being cost effective
+      - Size: 127 GiB
+      - Storage type: Standard SSD LRS
 
