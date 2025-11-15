@@ -4,9 +4,8 @@ Steps for setting up a VM in azure and installing Windows Server 2022
  - VNET Name: vnet-adlab
  - Create a resource group - rg-adlab-eastus2
  - Create a VNET with address space 10.0.0.0/16
- - Create two subnets:
+ - Create subnet:
     Workload at 10.0.1.0/24
-    AzureBastionSubnet at 10.0.2.0/26 (for an Azure Bastion the subnet CIDR must be 26 or larger)
 
 2. Create the VM - this one will be used as the Domain Controller
   - Computer Name: DC-01
